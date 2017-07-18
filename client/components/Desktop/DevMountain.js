@@ -14,6 +14,11 @@ class DevMountain extends Component {
       <div className="DevMountain">
         <div className="left-side">
           <img className="frame" src={frame} />
+          {document.body.clientWidth > 800 ? (
+            <span>
+              <a href="/#/housing-portal">View Housing Portal</a><span className="only"> (only for desktop)</span>
+            </span>
+          ) : null}
         </div>
         <div className="right-side">
           <h2>Hired by DevMountain...</h2>

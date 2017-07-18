@@ -3,7 +3,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const session = require('express-session');
-const config = require('./config');
 const app = module.exports = express();
 
 /* APP */
@@ -12,7 +11,7 @@ app.use(bodyParser.json({limit: '50mb'}));
 app.use(cors());
 app.use(express.static(__dirname + '/build'));
 app.use(session({
-  secret: config.secret,
+  secret: '335h3hg3v542b53b56nn78',
   resave: true,
   saveUninitialized: true,
   cookie: {maxAge: 1000 * 60 * 60 * 24}

@@ -86,13 +86,11 @@ class Technologies extends Component {
             </div>
           );
         } else {
-          var toolTipText = tech.split("/static/media/")[1].split(".")[0];
           hexes.push(
             <div className="hex" key={j}>
               <div className="hex-top"></div>
               <div className="hex-mid"><img src={tech} /></div>
               <div className="hex-bot"></div>
-              <span>{toolTipText}</span>
             </div>
           );
         }
