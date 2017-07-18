@@ -1,0 +1,46 @@
+.CommonsApp {
+  width: 100%;
+  .desktop-phone {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    img {
+      position: absolute;
+      max-width: 450px;
+      max-height: 100%;
+    }
+    .iframe-desktop {
+      position: absolute;
+      margin-top: 106px;
+      width: 414px;
+      height: 736px;
+      border: solid #232323;
+    }
+  }
+  .iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    border: none;
+  }
+  .back-button {
+    text-decoration: none;
+    position: fixed;
+    width: 100px;
+    height: 40px;
+    background: #f26648;
+    border-radius: 5px;
+    bottom: 20px;
+    left: 20px;
+    text-align: center;
+    p {
+      padding: 12px 0px;
+      color: white;
+    }
+  }
+}

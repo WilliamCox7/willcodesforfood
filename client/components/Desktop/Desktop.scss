@@ -146,6 +146,10 @@
   margin-bottom: 8px;
 }
 
+.only {
+  color: lightgray;
+}
+
 .Work .Commons .left-side {
   width: 50%;
   padding: 100px 50px;
@@ -164,6 +168,7 @@
 .Work .Commons .right-side .portrait {
   top: 0;
   right: 30px;
+  max-height: 720px;
 }
 
 .Work .Commons .right-side .landscape {
