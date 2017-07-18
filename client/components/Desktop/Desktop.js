@@ -47,8 +47,8 @@ class Desktop extends Component {
           <source src="https://williamcox7.github.io/portfolio/fjvid.mp4" type="video/mp4"/>
         </video>
         <div className="break"></div>
-        <Rates />
-        <div className="break"></div>
+        {/* <Rates />
+        <div className="break"></div> */}
         {/* <Contact /> */}
         <div className="break"></div>
         <div id="my-info-bottom" className="my-info">
