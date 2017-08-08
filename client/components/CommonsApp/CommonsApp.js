@@ -8,7 +8,6 @@ class CommonsApp extends Component {
       <div className="CommonsApp">
         {document.body.clientWidth > 500 ? (
           <div className="desktop-phone">
-            <img src={phone} />
             <iframe className="iframe-desktop" src="https://storage.googleapis.com/xenodochial-xenolalia-4583/index.html#/feed"></iframe>
           </div>
         ) : (
