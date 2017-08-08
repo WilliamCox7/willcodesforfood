@@ -1,5 +1,8 @@
 .CommonsApp {
   width: 100%;
+  height: 100%;
+  position: absolute;
+  background: white;
   .desktop-phone {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -14,9 +17,12 @@
     }
     .iframe-desktop {
       position: absolute;
-      margin-top: 106px;
+      margin: auto;
+      top: 0;
+      bottom: 0;
       width: 414px;
-      height: 736px;
+      max-height: 736px;
+      height: calc(100% - 40px);
       border: solid #232323;
     }
   }

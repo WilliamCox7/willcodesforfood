@@ -18,7 +18,11 @@ class DevMountain extends Component {
             <span>
               <a href="/#/housing-portal">View Housing Portal</a><span className="only"> (only for desktop)</span>
             </span>
-          ) : null}
+          ) : (
+		    <span>
+		      <span className="only">View Housing Portal (only for desktop)</span>
+		    </span>
+          )}
         </div>
         <div className="right-side">
           <h2>Hired by DevMountain...</h2>

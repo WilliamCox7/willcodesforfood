@@ -11,7 +11,7 @@ app.use(bodyParser.json({limit: '50mb'}));
 app.use(cors());
 app.use(express.static(__dirname + '/build'));
 app.use(session({
-  secret: '335h3hg3v542b53b56nn78',
+  secret: 'wvh983h49v4j34kjht493h',
   resave: true,
   saveUninitialized: true,
   cookie: {maxAge: 1000 * 60 * 60 * 24}
