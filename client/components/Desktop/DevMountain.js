@@ -19,9 +19,9 @@ class DevMountain extends Component {
               <a href="/#/housing-portal">View Housing Portal</a><span className="only"> (only for desktop)</span>
             </span>
           ) : (
-		    <span>
-		      <span className="only">View Housing Portal (only for desktop)</span>
-		    </span>
+    		    <span>
+    		      <span className="only">View Housing Portal (only for desktop)</span>
+    		    </span>
           )}
         </div>
         <div className="right-side">
@@ -38,7 +38,7 @@ class DevMountain extends Component {
           <p>
             I built the housing portal using the React.js
             library with react router, webpack, and redux.
-            I processed my css with sass and used Node.js
+            I processed my CSS with SASS and used Node.js
             and MongoDB for my backend. I also paired
             the site with Salesforce using JSforce to
             syncronize their data.
