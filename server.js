@@ -1,22 +1,20 @@
-/* PACKAGES */
+// packages
 const express = require('express');
 const bodyParser = require('body-parser');
-const cors = require('cors');
-const session = require('express-session');
+const path = require('path');
+
+// express setup
 const app = module.exports = express();
-
-/* APP */
-app.set('port', (process.env.PORT || 3000));
-app.use(bodyParser.json({limit: '50mb'}));
-app.use(cors());
+app.set('port', (process.env.PORT || 3001));
+app.use(bodyParser.json());
 app.use(express.static(__dirname + '/build'));
-app.use(session({
-  secret: 'wvh983h49v4j34kjht493h',
-  resave: true,
-  saveUninitialized: true,
-  cookie: {maxAge: 1000 * 60 * 60 * 24}
-}));
 
+// wildcard route - allows for browser refresh while using react router
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, './build/index.html'))
+});
+
+// express app is running - success message
 app.listen(app.get('port'), () => {
   console.log('localhost:' + app.get('port'));
 });
