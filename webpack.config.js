@@ -1,5 +1,5 @@
-const webpack = require('webpack');
-const path = require('path');
+var webpack = require('webpack');
+var path = require('path');
 
 module.exports = {
 
@@ -15,15 +15,6 @@ module.exports = {
     publicPath: '/'
   },
 
-  plugins: [
-    new webpack.DefinePlugin({
-      'process.env': {
-        'NODE_ENV': JSON.stringify('development'),
-        'HOST': JSON.stringify('http://localhost:3001')
-      }
-    })
-  ],
-
   mode: 'development',
 
   module: {
@@ -31,7 +22,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude:/node_modules/,
-        loaders: [ 'babel-loader']
+        loaders: [ 'babel-loader' ]
       },
       {
         test: /\.scss$/,
@@ -42,7 +33,7 @@ module.exports = {
         loader: 'file-loader'
       },
       {
-        test: /\.(ttc|ttf|eot|woff|woff2|mp4)$/,
+        test: /\.(ttc|ttf|eot|woff|woff2)$/,
         loader: 'file-loader'
       },
       {
