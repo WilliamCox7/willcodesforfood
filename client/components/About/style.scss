@@ -6,6 +6,10 @@
     font-size: 30px;
     font-weight: bold;
 
+    @media(max-width: 730px) {
+      font-size: 20px;
+    }
+
   }
 
   .header-spacing {
@@ -21,74 +25,98 @@
     height: 75px;
     
   }
-
-  .moab {
-    width: 100%;
-    min-width: 600px;
-  }
   
   .about-info {
+
     position: relative;
-  }
+
+    .moab-wrapper {
+
+      width: 100%;
+      overflow: hidden;
+
+      .moab {
+
+        width: 100%;
+        min-width: 600px;
   
-  .about-info .will {
-    position: absolute;
-    bottom: -150px;
-    left: 10%;
-    border-radius: 50%;
-    border: solid 4px #ececec;
-  }
-  
-  .about-info .about-para {
-    width: calc(90% - 308px);
-    line-height: 20px;
-    float: right;
-    padding: 50px 10%;
-    right: 0;
-  }
-  
-  .about-info .about-para p {
-    margin-bottom: 20px;
-    line-height: 24px;
-    font-size: 18px;
-    font-weight: 100;
+      }
+
+    }
+
+    .will {
+
+      position: absolute;
+      bottom: -150px;
+      left: 10%;
+      border-radius: 50%;
+      border: solid 4px #ececec;
+
+      @media(max-width: 1180px) {
+
+        bottom: -115px;
+        width: 230px;
+
+      }
+
+      @media(max-width: 920px) {
+
+        margin: auto;
+        left: 0;
+        right: 0;
+
+      }
+
+      @media(max-width: 730px) {
+
+        width: 150px;
+        bottom: -75px;
+
+      }
+
+    }
+
+    .about-para {
+
+      width: calc(90% - 308px);
+      line-height: 20px;
+      float: right;
+      padding: 50px 10%;
+      right: 0;
+
+      @media(max-width: 1180px) {
+        width: calc(90% - 230px);
+      }
+
+      @media(max-width: 1180px) {
+        
+        width: 100%;
+        padding-top: 150px;
+
+      }
+
+      @media(max-width: 730px) {
+        padding: 100px 15px 50px;
+      }
+
+      p {
+        margin-bottom: 20px;
+        line-height: 24px;
+        font-size: 18px;
+        font-weight: 100;
+
+        @media(max-width: 730px) {
+          font-size: 14px;
+        }
+
+      }
+
+    }
+
   }
 
   video {
     width: 100%;
-  }
-
-  @media (max-width: 1180px) {
-    .about-info .will {
-      bottom: -115px;
-      width: 230px;
-    }
-    .about-info .about-para {
-      width: calc(90% - 230px);
-    }
-  }
-
-  @media (max-width: 920px) {
-    .about-info .will {
-      margin: auto;
-      left: 0;
-      right: 0;
-    }
-    .about-info .about-para {
-      width: 100%;
-      padding-top: 150px;
-    }
-  }
-
-  @media (max-width: 730px) {
-    .about-info .will {
-      width: 150px;
-      bottom: -75px;
-    }
-    .about-info .about-para {
-      padding-top: 100px;
-      padding-bottom: 50px;
-    }
   }
 
 }

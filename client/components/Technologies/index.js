@@ -3,11 +3,13 @@ import getAsset from '../../modules/get-asset';
 import './style.scss';
 
 const svgs = [
-  'amazon', 'android', 'blank', 'blank', 'blank', 'blank', 'angular', 'apache', 'babel', 'bootstrap', 'bower', 'c',
-  'blank', 'ccs3', 'cplusplus', 'blank', 'npm', 'nginx', 'blank', 'redis', 'git', 'blank', 'blank', 'github', 'apex',
-  'gulp', 'heroku', 'html5', 'blank', 'illustrator', 'java', 'blank', 'javascript', 'blank', 'jquery', 'less', 'linux',
-  'mongodb', 'mysql', 'node', 'blank', 'photoshop', 'php', 'postgres', 'blank', 'react', 'salesforce', 'sass', 'blank',
-  'vim', 'webpack'
+  'amazon', 'android', 'blank', 'webpack', 'blank', 'blank', 'angular', 
+  'apache', 'babel', 'bootstrap', 'bower', 'c', 'blank', 'ccs3', 
+  'cplusplus', 'blank', 'npm', 'nginx', 'blank', 'redis', 'git', 
+  'vim', 'blank', 'github', 'apex', 'gulp', 'heroku', 'html5', 
+  'blank', 'illustrator', 'java', 'blank', 'javascript', 'blank', 'jquery', 
+  'less', 'linux', 'mongodb', 'mysql', 'node', 'blank', 'photoshop', 
+  'php', 'postgres', 'blank', 'react', 'salesforce', 'sass', 'blank'
 ];
 
 class Technologies extends Component {
@@ -15,8 +17,7 @@ class Technologies extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      techs: [],
-      width: undefined
+      techs: []
     }
     this.wrap = this.wrap.bind(this);
   }
@@ -27,38 +28,37 @@ class Technologies extends Component {
   }
 
   wrap() {
-    var margin = 200;
-    if (document.body.clientWidth < 500) { margin = 0; }
-    var width = document.body.clientWidth - margin;
-    if (width > 1350) { width = 1350; }
-    var hexWidth = 140;
-    // if (width+margin < 850) { hexWidth = 87; }
-    var numHexes = Math.round(width / hexWidth)-1;
-    var svgsShow = svgs;
-    if (width+margin < 990) {
-      svgsShow = svgsShow.filter((svg) => {
-        if (svg !== 'blank') { return true; }
-      });
+    let bodyWidth = document.body.offsetWidth;
+    let techContainer = document.getElementById('tech-container');
+    let width = techContainer.offsetWidth;
+    let hexWidth = bodyWidth > 850 ? 140 : 90;
+    let numHexes = Math.round(width / hexWidth) - 1;
+    console.log(numHexes);
+    
+    let svgsShow = svgs;
+    if (width < 990) {
+      svgsShow = svgsShow.filter((svg) => svg !== 'blank');
     }
-    var newTechs = [], i, j;
-    for (i = 0, j = svgsShow.length; i < j; i+=numHexes) {
-      var tempArray = svgsShow.slice(i, i+numHexes);
+    let newTechs = [], i, j;
+    for (i = 0, j = svgsShow.length; i < j; i += numHexes) {
+      let tempArray = svgsShow.slice(i, i + numHexes);
       while (tempArray.length !== numHexes) {
         tempArray.push('blank');
       }
       newTechs.push(tempArray);
     }
-    this.setState({techs: newTechs, width: width});
+    this.setState({techs: newTechs});
   }
 
   render() {
 
-    var rows = [], marginLeft = -70;
-    // if (this.state.width+200 < 834) { marginLeft = -44; }
+    var rows = [];
     this.state.techs.forEach((array, i) => {
       var even, hexes = [];
+
       if (i % 2 === 0) { even = true; }
       else { even = false; }
+
       array.forEach((tech, j) => {
         if (tech === 'blank') {
           hexes.push(
@@ -78,10 +78,19 @@ class Technologies extends Component {
           );
         }
       });
+
+      if (!even) {
+        hexes.push(
+          <div className="blank" key={`row-${i}`}>
+            <div className="blank-top"></div>
+            <div className="blank-mid"></div>
+            <div className="blank-bot"></div>
+          </div>
+        );
+      }
+
       rows.push(
-        <div className="tech-row" key={i} style={even ? {
-          marginLeft: marginLeft
-        } : { marginLeft: Math.abs(marginLeft) }}>
+        <div className="tech-row flex" key={i}>
           {hexes}
         </div>
       );
@@ -91,7 +100,7 @@ class Technologies extends Component {
       <div id="Technologies">
         <div className="header-spacing"></div>
         <h1 className="tech-header">Technologies I’m Familiar With</h1>
-        <div className="tech-container" style={{width: this.state.width}}>
+        <div id="tech-container" className="flex fd-c ai-c">
           {rows}
         </div>
       </div>

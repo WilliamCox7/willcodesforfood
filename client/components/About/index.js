@@ -10,7 +10,9 @@ class About extends Component {
         <h1 className="about-header">About Me</h1>
         <div className="info-spacing"></div>
         <div className="about-info">
-          <img className="moab" src={getAsset('moab', 'jpg')} />
+          <div className="moab-wrapper">
+            <img className="moab" src={getAsset('moab', 'jpg')} />
+          </div>
           <img className="will" src={getAsset('will', 'jpg')} />
           <div className="about-para">
             <p>

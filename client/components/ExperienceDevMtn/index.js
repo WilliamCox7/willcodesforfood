@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import getAsset from '../../modules/get-asset';
+import MediaQuery from 'react-responsive';
 import './style.scss';
 
 class ExperienceDevMtn extends Component {
@@ -7,7 +9,7 @@ class ExperienceDevMtn extends Component {
       <div id="ExperienceDevMtn">
         <div className="header-spacing"></div>
         <div className="flex jc-sb">
-          <h1 className="experience-subheader">DevMountain Housing Portal</h1>
+          <h1 className="experience-subheader">DevMountain</h1>
           <h1 className="experience-subheader">React.js / Node.js</h1>
         </div>
         <div className="copy-spacing"></div>
@@ -21,9 +23,16 @@ class ExperienceDevMtn extends Component {
         </ul>
         <div className="content-spacing"></div>
         <div className="content flex jc-sb">
-          <div className="item-box">
-            <iframe src="https://powerful-sands-79627.herokuapp.com/#/"></iframe>
-          </div>
+          <MediaQuery minWidth={1200}>
+            <div className="item-box">
+              <iframe src="https://powerful-sands-79627.herokuapp.com/#/"></iframe>
+            </div>
+          </MediaQuery>
+          <MediaQuery maxWidth={1199}>
+            <div className="item-box">
+              <img src={getAsset('devmtn1', 'png')} />
+            </div>
+          </MediaQuery>
         </div>
       </div>
     );
