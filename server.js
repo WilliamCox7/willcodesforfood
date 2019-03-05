@@ -18,3 +18,7 @@ app.get('*', (req, res) => {
 app.listen(app.get('port'), () => {
   console.log('localhost:' + app.get('port'));
 });
+
+setInterval(function() {
+  http.get("http://willcodesforfood.herokuapp.com");
+}, 300000);
