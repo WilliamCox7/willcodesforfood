@@ -20,5 +20,6 @@ app.listen(app.get('port'), () => {
 });
 
 setInterval(function() {
-  http.get("http://willcodesforfood.herokuapp.com");
+  let hour = new Date().getHours();
+  if (hour >= 6 && hours <= 19) http.get("http://willcodesforfood.herokuapp.com");
 }, 300000);
