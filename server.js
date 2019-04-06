@@ -20,6 +20,6 @@ app.listen(app.get('port'), () => {
 });
 
 setInterval(function() {
-  let hour = new Date().getHours();
-  if (hour >= 6 && hours <= 19) http.get("http://willcodesforfood.herokuapp.com");
+  let hour = new Date().getUTCHours();
+  if (hour >= 12 && hours <= 24) http.get("http://willcodesforfood.herokuapp.com");
 }, 300000);
