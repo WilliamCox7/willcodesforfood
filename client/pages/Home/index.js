@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Nav from '../../components/Nav';
-import CodeBlock from '../../components/CodeBlock';
-import ExperienceStruck from '../../components/ExperienceStruck';
+// import CodeBlock from '../../components/CodeBlock';
+// import ExperienceStruck from '../../components/ExperienceStruck';
 import ExperienceGraphix from '../../components/ExperienceGraphix';
 import ExperienceDevMtn from '../../components/ExperienceDevMtn';
 import ExperienceCStep from '../../components/ExperienceCStep';
@@ -15,11 +15,12 @@ class Home extends Component {
       <div id="Home">
         <Nav />
         <div className="container">
-          <CodeBlock />
+          <div className="top-space"></div>
+          {/* <CodeBlock /> */}
           <h1 className="experience-header">Relevant Work Experience</h1>
           <ExperienceGraphix />
           <ExperienceCStep />
-          <ExperienceStruck />
+          {/* <ExperienceStruck /> */}
           <ExperienceDevMtn />
           <Technologies />
           <About />

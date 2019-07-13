@@ -14,7 +14,7 @@ class ExperienceGraphix extends Component {
         <div className="copy-spacing"></div>
         <p className="experience-copy">
           Textile Graphix hired me on to completely overhaul their website. Provided with
-          their new design, I built the site from scratch from the ground up. The software
+          their new design, I built the site from the ground up. The software
           provides the user with the ability to upload their own design and mass produce
           their shirt.
         </p>

@@ -21,5 +21,5 @@ app.listen(app.get('port'), () => {
 
 setInterval(function() {
   let hour = new Date().getHours().toLocaleString("en-US", { timeZone: "America/Phoenix" });
-  if (Number(hour) >= 6 && Number(hours) <= 20) http.get("http://willcodesforfood.herokuapp.com");
+  if (Number(hour) >= 6 && Number(hour) <= 20) http.get("http://willcodesforfood.herokuapp.com");
 }, 300000);
