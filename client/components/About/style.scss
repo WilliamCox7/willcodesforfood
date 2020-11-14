@@ -34,44 +34,56 @@
 
       width: 100%;
       overflow: hidden;
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
 
       .moab {
 
         width: 100%;
         min-width: 600px;
+        border: solid 6px white;
   
       }
 
     }
 
-    .will {
+    .will-wrapper {
 
-      position: absolute;
-      bottom: -150px;
-      left: 10%;
+      width: 300px;
       border-radius: 50%;
-      border: solid 4px #ececec;
+      overflow: hidden;
+      height: 300px;
+      border: solid 6px white;
+      position: absolute;
+      bottom: -155px;
+      left: 10%;
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
 
-      @media(max-width: 1180px) {
+      .will {
 
-        bottom: -115px;
-        width: 230px;
-
-      }
-
-      @media(max-width: 920px) {
-
-        margin: auto;
-        left: 0;
-        right: 0;
-
-      }
-
-      @media(max-width: 730px) {
-
-        width: 150px;
-        bottom: -75px;
-
+        width: 100%;
+  
+        @media(max-width: 1180px) {
+  
+          bottom: -115px;
+          width: 230px;
+  
+        }
+  
+        @media(max-width: 920px) {
+  
+          margin: auto;
+          left: 0;
+          right: 0;
+  
+        }
+  
+        @media(max-width: 730px) {
+  
+          width: 150px;
+          bottom: -75px;
+  
+        }
+  
       }
 
     }
@@ -117,6 +129,8 @@
 
   video {
     width: 100%;
+    border: solid 6px white;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   }
 
 }

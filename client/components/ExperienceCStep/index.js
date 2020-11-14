@@ -25,7 +25,7 @@ class ExperienceCStep extends Component {
         <div className="content-spacing"></div>
         <div className="content flex jc-sb">
           <div className="item-box">
-            <img src={getAsset('cstep1', 'png')} />
+            <iframe src="https://careerstep.com"></iframe>
           </div>
         </div>
       </div>

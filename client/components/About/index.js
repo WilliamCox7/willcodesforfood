@@ -12,8 +12,10 @@ class About extends Component {
         <div className="about-info">
           <div className="moab-wrapper">
             <img className="moab" src={getAsset('moab', 'jpg')} />
+            <div className="will-wrapper">
+              <img className="will" src={getAsset('will', 'jpeg')} />
+            </div>
           </div>
-          <img className="will" src={getAsset('will', 'jpg')} />
           <div className="about-para">
             <p>
               I am a Utah native that enjoys watching/playing sports, the
