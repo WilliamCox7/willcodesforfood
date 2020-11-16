@@ -1,0 +1,129 @@
+.main {
+  background: #FFFFFF;
+  border-radius: 4px;
+  border: solid 0.5px #c6c7ce;
+  max-width: 600px;
+  margin: auto;
+  margin-top: 90px;
+  margin-bottom: 90px;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
+}
+
+@media(max-width: 750px) {
+  .main {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+.header {
+  padding: 60px 60px 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.header img {
+  width: 200px;
+  position: absolute;
+  top: 35px;
+  left: 38px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+.smallImg {
+  -webkit-filter: blur(50px);
+          filter: blur(50px);
+  transform: scale(1);
+}
+
+.circleContainer {
+  width: 250px;
+  height: 250px;
+  background: #EDEDEF;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.circle {
+  width: 250px;
+  height: 250px;
+  background: #EDEDEF;
+  border-radius: 50%;
+  box-shadow: 0px 3px 6px inset rgba(0,0,0,0.16);
+  overflow: hidden;
+  position: relative;
+}
+
+.header h1 {
+  font-size: 30px;
+  font-weight: 100;
+  color: #333641;
+}
+
+.socialContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  padding: 0px 60px;
+}
+
+@media(max-width: 600px) {
+  .socialContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .socialItem:nth-child(1) {
+    margin-bottom: 20px;
+  }
+}
+
+.socialItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.socialItem h2 {
+  color: #333641;
+}
+
+.socialItem img {
+  width: 24px;
+  margin-right: 10px;
+}
+
+.iconContainer {
+  display: flex;
+  margin-bottom: 60px;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  border-top: solid 0.5px #c6c7ce;
+  border-bottom: solid 0.5px #c6c7ce;
+  border-right: solid 0.5px #c6c7ce;
+}
+
+.icon:nth-child(5) {
+  border-right: none;
+}
+
+.icon h3 {
+  color: #333641;
+  font-size: 12px;
+}
+
+.icon img {
+  width: 50px;
+  min-height: 50px;
+  margin-bottom: 10px;
+}
