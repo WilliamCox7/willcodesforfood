@@ -18,6 +18,16 @@ export default function Home() {
     largeImg.onload = () => setTimeout(() => largeImg.style.opacity = 1, 500);
 
     placeholder.appendChild(largeImg);
+
+    let iframe1 = document.createElement("IFRAME");
+    iframe1.setAttribute("src", "https://young-ridge-02573.herokuapp.com/");
+    iframe1.style.display = "none";
+    let iframe2 = document.createElement("IFRAME");
+    iframe2.setAttribute("src", "https://powerful-sands-79627.herokuapp.com/#/");
+    iframe2.style.display = "none";
+
+    document.body.appendChild(iframe1);
+    document.body.appendChild(iframe2);
   }, []);
 
   return (
