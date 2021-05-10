@@ -86,6 +86,34 @@ export default function Home() {
         </div>
         
         <Post config={{
+          logo: "nodexpstudios.svg",
+          company: "Node XP Studios LLC",
+          slides: [
+            "nodexpstudios-slide-1.png",
+            "nodexpstudios-slide-2.png",
+            "nodexpstudios-slide-3.png"
+          ],
+          title: "Personal Business",
+          time: "Sep 2020 - Present",
+          copy: "I have always wanted to have my own business. I have a ton of ideas and this app is my first attempt! Made with React Native.",
+          sandbox: "https://dmvp.app",
+          linkText: "View Landing Page"
+        }} />
+
+        <Post config={{
+          logo: "hubsuite.png",
+          company: "Hubsuite",
+          slides: [
+            "hubsuite-slide-1.png",
+            "hubsuite-slide-2.png",
+            "hubsuite-slide-3.png"
+          ],
+          title: "Sr. Full Stack Engineer",
+          time: "Sep 2020 - Present",
+          copy: "A local company started a business coaching franchisees. I was hired to develop software that would display KPIs and build a bridge from coach to franchisee."
+        }} />
+        
+        <Post config={{
           logo: "textilegraphix.svg",
           company: "Textile Graphix",
           slides: [

@@ -33,6 +33,10 @@
   margin-right: 10px;
 }
 
+.logoImg {
+  width: 60%;
+}
+
 .slides {
   position: relative;
   max-width: 380px;
@@ -84,12 +88,14 @@
   padding: 12px 10px;
   display: flex;
   justify-content: center;
-  width: 120px;
+  max-width: 170px;
   border-radius: 4px;
   margin: auto;
   margin-bottom: 60px;
   background: linear-gradient(45deg, #FFFFFF, #EFEFEF);
   font-size: 14px;
+  text-align: center;
+  line-height: 20px;
 }
 
 .arrowLeft {
@@ -105,4 +111,8 @@
   top: calc(50% - 20px);
   transform: rotate(180deg);
   cursor: pointer;
+}
+
+.space {
+  height: 60px;
 }

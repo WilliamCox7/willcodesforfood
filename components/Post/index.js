@@ -3,7 +3,7 @@ import SwipeableViews from 'react-swipeable-views'
 import styles from '../../styles/Post.module.css'
 
 export default function Post({ config: {
-  logo, company, slides, title, time, copy, sandbox
+  logo, company, slides, title, time, copy, sandbox, linkText
 }}) {
 
   let [index, setIndex] = useState(0);
@@ -13,7 +13,7 @@ export default function Post({ config: {
 
       <div className={styles.header}>
         <div className={styles.logoContainer}>
-          <img src={logo} />
+          <img className={styles.logoImg} src={logo} />
         </div>
         <h3>{company}</h3>
       </div>
@@ -53,9 +53,11 @@ export default function Post({ config: {
         <p>{copy}</p>
       </div>
 
-      <a href={sandbox} className={styles.button}>
-        View Sandbox
-      </a>
+      {sandbox && <a href={sandbox} className={styles.button}>
+        {linkText ? linkText : "View Sandbox"}
+      </a>}
+
+      {!sandbox && <div className={styles.space}></div>}
 
     </div>
   )
