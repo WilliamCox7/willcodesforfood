@@ -85,7 +85,7 @@ export default function Home() {
           </div>
         </div>
         
-        <Post config={{
+        {/* <Post config={{
           logo: "nodexpstudios.svg",
           company: "Node XP Studios LLC",
           slides: [
@@ -98,7 +98,7 @@ export default function Home() {
           copy: "I have always wanted to have my own business. I have a ton of ideas and this app is my first attempt! Made with React Native.",
           sandbox: "https://dmvp.app",
           linkText: "View Landing Page"
-        }} />
+        }} /> */}
 
         <Post config={{
           logo: "hubsuite.png",
